@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <span>test</span>
+</div>
+<script type="text/javascript" src="../build/zos-ecc.js"></script>
+<script type="text/javascript">
+    var account = "dylan", password = "qwer1234";
+    var chain_id = "6202d61065732dea57057bf4d9d60ed0a85d3a7712621516dce18d9da404fc79"
+    var bufferStr ="6202d61065732dea57057bf4d9d60ed0a85d3a7712621516dce18d9da404fc792f6500811de55019405c0100102700000000000000a501a301630000000000000000000000"
+    var retBuff = zosEcc.ZosSignature.signature(bufferStr,account,password);
+    //console.log("retBuff",retBuff);
+    //1b580b4fb2153714fd2fd6d981043499bb9782ae47597cc9f63b94e993d1981616120708d734f0a36b904780370500b4a1e7fe66f2dc79ba7bded8358cb823a462
+    //1f580b4fb2153714fd2fd6d981043499bb9782ae47597cc9f63b94e993d1981616120708d734f0a36b904780370500b4a1e7fe66f2dc79ba7bded8358cb823a462
+    //1b580b4fb2153714fd2fd6d981043499bb9782ae47597cc9f63b94e993d1981616120708d734f0a36b904780370500b4a1e7fe66f2dc79ba7bded8358cb823a462
+    //bufferStr ="7f56007f83d061eb3f5c0100102700000000000000a501a301630000000000000000000000"
+    //var retBuff2 = zosEcc.ZosSignature.signature2(bufferStr,account,password,chain_id);
+</script>
+
+</body>
+
+</html>
